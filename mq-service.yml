@@ -6,7 +6,7 @@ spec:
   type: LoadBalancer
   ports:
     - port: 8161
-      nodePort: 30010
+      targetPort: 30010
   selector:
     name: mq-pod
     tier: backend
