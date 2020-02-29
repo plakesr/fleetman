@@ -6,17 +6,15 @@ metadata:
   name: fleetman-queue
 
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: http
       port: 8161
-   
-  type: ClusterIP   
-  ports:
+      nodeport: 30010
+     
     - name: endpoint
       port: 61616
       
-
   selector:
     app: queue
 
