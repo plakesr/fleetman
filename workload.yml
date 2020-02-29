@@ -42,3 +42,27 @@ spec:
   selector:
     matchLabels:
       app: position-simulator
+
+---
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: position-tracker
+spec:
+  template:
+    metadata:
+      labels:
+        app: position-tracker
+    spec:
+      containers:
+        - name: position-tracker
+          image: richardchesterwood/k8s-fleetman-position-tracker:release1
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: production-microservice
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: position-tracker
+            
