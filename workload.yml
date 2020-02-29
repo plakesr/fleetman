@@ -34,8 +34,8 @@ spec:
         - name: position-simulator
           image: richardchesterwood/k8s-fleetman-position-simulator:release1
     
-    replicas: 1
+  replicas: 1
 
-    selector:
-      matchLabels:
-        app: position-simulator
+  selector:
+    matchLabels:
+      app: position-simulator
