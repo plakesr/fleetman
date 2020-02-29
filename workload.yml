@@ -18,3 +18,24 @@ spec:
   selector:
     matchLabels:
       app:  queue
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: position-simulator
+spec: 
+  template:
+    metadata:
+      labels:
+        app: position-simulator
+    spec:
+      containers:
+        - name: position-simulator
+          image: richardchesterwood/k8s-fleetman-position-simulator:release1
+    
+    replicas: 1
+
+    selector:
+      matchLabels:
+        app: position-simulator
