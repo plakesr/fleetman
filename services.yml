@@ -8,12 +8,25 @@ metadata:
 spec:
   
   ports:
-    - name: http
-      port: 8161
-      
-     
     - name: endpoint
       port: 61616
+      
+  selector:
+    app: queue
+
+---
+apiVersion: v1
+
+kind: Service
+
+metadata: 
+  name: fleetman-queue-web
+
+spec:
+  type: LoadBalancer
+  ports:
+    - name: http
+      port: 8161
       
   selector:
     app: queue
