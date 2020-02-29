@@ -14,7 +14,7 @@ spec:
     - name: endpoint
       port: 61616
 
-   selector:
-      app: queue
+  selector:
+    app: queue
 
      
