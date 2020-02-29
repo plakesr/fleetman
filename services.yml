@@ -67,6 +67,7 @@ metadata:
 spec:
   
   ports:
+    type: LoadBalancer
     - name: http
       port: 80
       
