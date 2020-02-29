@@ -88,4 +88,27 @@ spec:
   selector:
     matchLabels:
       app: api-gateway
+
+---
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: webapp
+spec:
+  template:
+    metadata:
+      labels:
+        app: webapp
+    spec:
+      containers:
+        - name: webapp
+          image: richardchesterwood/k8s-fleetman-webapp-angular:release1
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: production-microservice
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: webapp
             
