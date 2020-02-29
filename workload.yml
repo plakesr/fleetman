@@ -33,6 +33,9 @@ spec:
       containers:
         - name: position-simulator
           image: richardchesterwood/k8s-fleetman-position-simulator:release1
+          env: 
+            - name: SPRING_PROFILES_ACTIVE
+              value: production-microservice
     
   replicas: 1
 
