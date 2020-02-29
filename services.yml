@@ -37,10 +37,11 @@ kind: Service
 metadata: 
   name: fleetman-position-tracker
 spec:
-  type: LoadBalancer
+  type: NodePort
   ports:
     - name: rest
       port: 8080
+      nodePort: 30020
   selector:
     app: position-tracker
 
