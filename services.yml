@@ -45,4 +45,16 @@ spec:
   selector:
     app: position-tracker
 
-     
+---
+apiVersion: v1
+kind: Service
+metadata: 
+  name: fleetman-api-gateway
+spec:
+  
+  ports:
+    - name: rest
+      port: 8080
+      
+  selector:
+    app: api-gateway

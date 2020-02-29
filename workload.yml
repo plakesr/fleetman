@@ -65,4 +65,27 @@ spec:
   selector:
     matchLabels:
       app: position-tracker
+
+---
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: api-gateway
+spec:
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+        - name: api-gateway
+          image: richardchesterwood/k8s-fleetman-api-gateway:release1
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: production-microservice
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: position-tracker
             
