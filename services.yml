@@ -39,7 +39,7 @@ metadata:
 spec:
   type: LoadBalancer
   ports:
-    - name: REST
+    - name: rest
       port: 8080
   selector:
     app: position-tracker
