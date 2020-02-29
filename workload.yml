@@ -11,10 +11,10 @@ spec:
     spec:
       containers:
       - name: queue
-        image: richardchesterwood/k8s-fleetman-queue
+        image: richardchesterwood/k8s-fleetman-queue:release1
 
   replicas: 1
-  
+
   selector:
     matchLabels:
       app:  queue
