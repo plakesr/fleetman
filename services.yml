@@ -10,10 +10,12 @@ spec:
   ports:
     - name: http
       port: 8161
-      
+   
+  type: ClusterIP   
   ports:
     - name: endpoint
       port: 61616
+      
 
   selector:
     app: queue
