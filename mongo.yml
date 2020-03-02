@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: mongodb
-          image: mongo.3.6.5-jessie
+          image: mongo:3.6.5-jessie
 
   replicas: 1
   selector:
