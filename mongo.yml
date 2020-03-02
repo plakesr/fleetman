@@ -7,10 +7,10 @@ spec:
     metadata:
       labels:
         app: mongodb
-  spec:
-    containers:
-      - name: mongodb
-        image: mongo.3.6.5-jessie
+    spec:
+      containers:
+        - name: mongodb
+          image: mongo.3.6.5-jessie
 
   replicas: 1
   selector:
